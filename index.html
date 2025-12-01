@@ -1089,11 +1089,14 @@
                     link.setAttribute('data-tooltip', translation[currentLang]);
                 }
             });
+
+            // Re-initialize tooltip event listeners after innerHTML update
+            initializeTooltips();
         }
 
         // Initialize language on page load
         document.addEventListener('DOMContentLoaded', function() {
-            updateLanguage();
+            updateLanguage(); // This will also call initializeTooltips()
         });
 
         // Enhanced tooltip functionality with images
@@ -1110,7 +1113,7 @@
         // Detect if device supports touch
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-        // Make tooltip clickable
+        // Make tooltip clickable (only set once)
         tooltip.style.cursor = 'pointer';
         tooltip.addEventListener('click', function(e) {
             if (currentUrl && tooltipShown) {
@@ -1119,41 +1122,51 @@
             }
         });
 
-        // Add listeners to all location links
-        document.querySelectorAll('.location-link').forEach(link => {
-            // Click handler for touch devices
-            link.addEventListener('click', function(e) {
-                if (isTouchDevice) {
-                    const description = this.getAttribute('data-tooltip');
-                    const image = this.getAttribute('data-image');
-
-                    // If tooltip is already shown for this link, allow navigation
-                    if (tooltipShown && currentLink === this) {
-                        return true; // Allow default behavior
-                    }
-
-                    // First click: show tooltip
-                    if (description && image) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        showTooltipForLink(this, e);
-                    }
-                }
+        // Initialize tooltip event listeners
+        function initializeTooltips() {
+            // Remove old listeners by cloning and replacing nodes (clean approach)
+            document.querySelectorAll('.location-link').forEach(link => {
+                // Clone the link to remove all event listeners
+                const newLink = link.cloneNode(true);
+                link.parentNode.replaceChild(newLink, link);
             });
 
-            // Hover listeners for desktop
-            if (!isTouchDevice) {
-                link.addEventListener('mouseenter', function(e) {
-                    showTooltipForLink(this, e);
+            // Add listeners to all location links
+            document.querySelectorAll('.location-link').forEach(link => {
+                // Click handler for touch devices
+                link.addEventListener('click', function(e) {
+                    if (isTouchDevice) {
+                        const description = this.getAttribute('data-tooltip');
+                        const image = this.getAttribute('data-image');
+
+                        // If tooltip is already shown for this link, allow navigation
+                        if (tooltipShown && currentLink === this) {
+                            return true; // Allow default behavior
+                        }
+
+                        // First click: show tooltip
+                        if (description && image) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            showTooltipForLink(this, e);
+                        }
+                    }
                 });
 
-                link.addEventListener('mousemove', positionTooltip);
+                // Hover listeners for desktop
+                if (!isTouchDevice) {
+                    link.addEventListener('mouseenter', function(e) {
+                        showTooltipForLink(this, e);
+                    });
 
-                link.addEventListener('mouseleave', function() {
-                    hideTooltip();
-                });
-            }
-        });
+                    link.addEventListener('mousemove', positionTooltip);
+
+                    link.addEventListener('mouseleave', function() {
+                        hideTooltip();
+                    });
+                }
+            });
+        }
 
         function showTooltipForLink(link, e) {
             clearTimeout(tooltipTimeout);
