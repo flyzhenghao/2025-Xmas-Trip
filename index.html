@@ -371,11 +371,13 @@
             max-width: 320px;
             overflow: hidden;
             transform: translateY(10px);
+            cursor: pointer;
         }
 
         .custom-tooltip.show {
             opacity: 1;
             transform: translateY(0);
+            pointer-events: auto;
         }
 
         .custom-tooltip::before {
@@ -808,43 +810,97 @@
         const tooltip = document.getElementById('customTooltip');
         const tooltipImage = tooltip.querySelector('.tooltip-image');
         const tooltipTitle = tooltip.querySelector('.tooltip-title');
-        const tooltipDescription = tooltip.querySelector('.tooltip-description');
+        const tooltipDescription = tooltip.querySelector('.tooltip-content');
 
         let currentLink = null;
         let tooltipTimeout = null;
+        let tooltipShown = false;
+        let currentUrl = '';
 
-        // Add hover listeners to all location links
+        // Detect if device supports touch
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        // Make tooltip clickable
+        tooltip.style.cursor = 'pointer';
+        tooltip.addEventListener('click', function(e) {
+            if (currentUrl && tooltipShown) {
+                window.open(currentUrl, '_blank');
+                hideTooltip();
+            }
+        });
+
+        // Add listeners to all location links
         document.querySelectorAll('.location-link').forEach(link => {
-            link.addEventListener('mouseenter', function(e) {
-                clearTimeout(tooltipTimeout);
+            // Click handler for touch devices
+            link.addEventListener('click', function(e) {
+                if (isTouchDevice) {
+                    const description = this.getAttribute('data-tooltip');
+                    const image = this.getAttribute('data-image');
 
-                const title = this.textContent.replace(/📍|🌐/g, '').trim();
-                const description = this.getAttribute('data-tooltip');
-                const image = this.getAttribute('data-image');
+                    // If tooltip is already shown for this link, allow navigation
+                    if (tooltipShown && currentLink === this) {
+                        return true; // Allow default behavior
+                    }
 
-                if (description && image) {
-                    tooltipTitle.textContent = title;
-                    tooltipDescription.textContent = description;
-                    tooltipImage.src = image;
-                    tooltipImage.style.display = 'block';
-
-                    currentLink = this;
-                    positionTooltip(e);
-
-                    tooltipTimeout = setTimeout(() => {
-                        tooltip.classList.add('show');
-                    }, 100);
+                    // First click: show tooltip
+                    if (description && image) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        showTooltipForLink(this, e);
+                    }
                 }
             });
 
-            link.addEventListener('mousemove', positionTooltip);
+            // Hover listeners for desktop
+            if (!isTouchDevice) {
+                link.addEventListener('mouseenter', function(e) {
+                    showTooltipForLink(this, e);
+                });
 
-            link.addEventListener('mouseleave', function() {
-                clearTimeout(tooltipTimeout);
-                tooltip.classList.remove('show');
-                currentLink = null;
-            });
+                link.addEventListener('mousemove', positionTooltip);
+
+                link.addEventListener('mouseleave', function() {
+                    hideTooltip();
+                });
+            }
         });
+
+        function showTooltipForLink(link, e) {
+            clearTimeout(tooltipTimeout);
+
+            const title = link.textContent.replace(/📍|🌐/g, '').trim();
+            const description = link.getAttribute('data-tooltip');
+            const image = link.getAttribute('data-image');
+            currentUrl = link.getAttribute('href');
+
+            if (description && image) {
+                tooltipTitle.textContent = title;
+                tooltipDescription.querySelector('.tooltip-description').textContent = description;
+                tooltipImage.src = image;
+                tooltipImage.style.display = 'block';
+
+                currentLink = link;
+                tooltipShown = true;
+
+                if (isTouchDevice) {
+                    positionTooltipTouch(link);
+                } else {
+                    positionTooltip(e);
+                }
+
+                tooltipTimeout = setTimeout(() => {
+                    tooltip.classList.add('show');
+                }, 100);
+            }
+        }
+
+        function hideTooltip() {
+            clearTimeout(tooltipTimeout);
+            tooltip.classList.remove('show');
+            currentLink = null;
+            tooltipShown = false;
+            currentUrl = '';
+        }
 
         function positionTooltip(e) {
             if (!currentLink) return;
@@ -871,9 +927,39 @@
             tooltip.style.top = top + 'px';
         }
 
+        function positionTooltipTouch(link) {
+            const linkRect = link.getBoundingClientRect();
+            const tooltipRect = tooltip.getBoundingClientRect();
+            const padding = 20;
+
+            // Center tooltip horizontally relative to the link
+            let left = linkRect.left + (linkRect.width / 2) - (tooltipRect.width / 2);
+            let top = linkRect.top - tooltipRect.height - 10;
+
+            // Keep tooltip within viewport horizontally
+            if (left < padding) {
+                left = padding;
+            } else if (left + tooltipRect.width > window.innerWidth - padding) {
+                left = window.innerWidth - tooltipRect.width - padding;
+            }
+
+            // Keep tooltip within viewport vertically
+            if (top < padding) {
+                top = linkRect.bottom + 10; // Show below link if no space above
+            }
+
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+        }
+
         // Hide tooltip when scrolling
-        window.addEventListener('scroll', () => {
-            tooltip.classList.remove('show');
+        window.addEventListener('scroll', hideTooltip);
+
+        // Hide tooltip when clicking outside
+        document.addEventListener('click', function(e) {
+            if (isTouchDevice && tooltipShown && !tooltip.contains(e.target) && !e.target.classList.contains('location-link')) {
+                hideTooltip();
+            }
         });
     </script>
 </body>
