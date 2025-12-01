@@ -53,6 +53,41 @@
             50% { transform: translateY(-20px); }
         }
 
+        /* Language Switcher */
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-btn .icon {
+            font-size: 1.2em;
+        }
+
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
@@ -435,8 +470,14 @@
 <body>
     <div class="container">
         <header>
-            <h1>🎄 2025 圣诞新西兰北岛自驾游 🏔️</h1>
-            <p class="subtitle">北岛双节探险方案 | 狂野与悠闲的完美结合</p>
+            <div class="language-switcher">
+                <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">
+                    <span class="icon">🌐</span>
+                    <span id="langText">English</span>
+                </button>
+            </div>
+            <h1 data-zh="🎄 2025 圣诞新西兰北岛自驾游 🏔️" data-en="🎄 2025 Christmas New Zealand North Island Road Trip 🏔️">🎄 2025 圣诞新西兰北岛自驾游 🏔️</h1>
+            <p class="subtitle" data-zh="北岛双节探险方案 | 狂野与悠闲的完美结合" data-en="North Island Holiday Adventure | Perfect Balance of Wild and Relaxed">北岛双节探险方案 | 狂野与悠闲的完美结合</p>
         </header>
 
         <section class="intro">
@@ -806,6 +847,158 @@
     </div>
 
     <script>
+        // Language System
+        let currentLang = localStorage.getItem('language') || 'zh';
+
+        // Location tooltips translations
+        const locationTooltips = {
+            'Helensville': {
+                zh: '奥克兰西北部的小镇，风景优美，有乡村田园风光',
+                en: 'A charming town northwest of Auckland with beautiful rural countryside scenery'
+            },
+            'Whangārei': {
+                zh: '北地区最大城市，人口约5.5万，是通往北部景点的枢纽',
+                en: 'Largest city in Northland with about 55,000 people, gateway to northern attractions'
+            },
+            'Hundertwasser Art Centre': {
+                zh: '奥地利艺术家百水设计的独特建筑，色彩斑斓，楼顶有森林花园，地板故意设计成不平的',
+                en: 'Unique building designed by Austrian artist Hundertwasser, colorful with rooftop forest garden and deliberately uneven floors'
+            },
+            'Whangārei Falls': {
+                zh: '26米高的美丽瀑布，有短步道环绕，是旺格雷最受欢迎的景点之一',
+                en: '26-meter beautiful waterfall with short walking tracks, one of Whangārei\'s most popular attractions'
+            },
+            'Whangārei Town Basin': {
+                zh: '旺格雷的滨水区，有许多餐厅、咖啡馆和艺术画廊，夜晚灯光很美',
+                en: 'Whangārei\'s waterfront area with many restaurants, cafes and art galleries, beautifully lit at night'
+            },
+            'Opononi': {
+                zh: 'Hokianga海港边的小镇，以金色沙丘和海豚闻名，风景壮观',
+                en: 'Small town on Hokianga Harbour, famous for golden sand dunes and dolphins, spectacular scenery'
+            },
+            'Hokianga Express': {
+                zh: '提供Hokianga海港游船和沙丘滑沙体验，需提前预订，受潮汐和天气影响',
+                en: 'Provides Hokianga Harbour cruises and sand dune boarding experiences, advance booking required, tide and weather dependent'
+            },
+            'Waipoua Forest': {
+                zh: '新西兰最大的贝壳杉森林保护区，拥有古老的巨树，氛围神秘庄严',
+                en: 'New Zealand\'s largest kauri forest reserve with ancient giant trees, mysterious and solemn atmosphere'
+            },
+            'Tāne Mahuta': {
+                zh: '新西兰最大的贝壳杉树，树龄约2000年，树干周长13.8米，高51米，被毛利人尊为森林之神',
+                en: 'New Zealand\'s largest kauri tree, about 2000 years old, 13.8m girth, 51m tall, revered by Māori as the god of the forest'
+            },
+            'Tutukaka Coast': {
+                zh: '北地最美的海岸线之一，拥有多个绝美海湾，水质清澈，是潜水圣地',
+                en: 'One of Northland\'s most beautiful coastlines with stunning bays, crystal clear waters, diving paradise'
+            },
+            'Matapouri Bay': {
+                zh: '北地最受欢迎的月牙形海湾之一，白沙滩，碧绿海水，适合游泳和放松',
+                en: 'One of Northland\'s most popular crescent-shaped bays, white sandy beach, turquoise waters, perfect for swimming and relaxing'
+            },
+            'Whale Bay': {
+                zh: '隐藏的宝石海湾，需步行15分钟穿越森林步道，人少景美，水质极佳',
+                en: 'Hidden gem bay, 15-minute walk through forest track, uncrowded with beautiful scenery and excellent water quality'
+            },
+            'Napier': {
+                zh: '霍克湾最大城市，以Art Deco建筑闻名，1931年大地震后重建，充满复古魅力',
+                en: 'Hawke\'s Bay\'s largest city, famous for Art Deco architecture, rebuilt after 1931 earthquake, full of vintage charm'
+            },
+            'Taupō': {
+                zh: '北岛中部湖滨城市，坐落在新西兰最大湖泊陶波湖畔，适合中途休息',
+                en: 'Central North Island lakeside city on New Zealand\'s largest lake, perfect rest stop'
+            },
+            'Hastings': {
+                zh: '霍克湾第二大城市，距Napier 20分钟车程，住宿性价比更高，生活气息浓',
+                en: 'Hawke\'s Bay\'s second largest city, 20 minutes from Napier, better accommodation value, vibrant local atmosphere'
+            },
+            'Havelock North': {
+                zh: '霍克湾的精品小镇，靠近Te Mata Peak，有很多咖啡馆和特色小店',
+                en: 'Hawke\'s Bay\'s boutique town near Te Mata Peak, many cafes and specialty shops'
+            },
+            'Napier Marine Parade': {
+                zh: 'Napier的海滨大道，跨年夜有音乐会和烟花表演，氛围热闹',
+                en: 'Napier\'s seafront promenade, New Year\'s Eve concerts and fireworks, lively atmosphere'
+            },
+            'MTG Hawke\'s Bay': {
+                zh: '霍克湾博物馆和美术馆，1931大地震展厅震撼人心，展示Napier如何浴火重生',
+                en: 'Hawke\'s Bay Museum and Art Gallery, stunning 1931 earthquake exhibition showing Napier\'s rebirth'
+            },
+            'Bluff Hill Lookout': {
+                zh: 'Napier的最佳观景点，可以360度俯瞰城市、港口和海岸线',
+                en: 'Napier\'s best viewpoint, 360-degree views of city, port and coastline'
+            },
+            'Mission Estate': {
+                zh: '新西兰最古老的酒庄（1851年），环境优美，餐厅和品酒室景观一流',
+                en: 'New Zealand\'s oldest winery (1851), beautiful setting, excellent restaurant and tasting room views'
+            },
+            'Craggy Range': {
+                zh: '精品酒庄，以Te Mata Peak为背景，建筑设计现代，葡萄酒和景色都是顶级',
+                en: 'Boutique winery with Te Mata Peak backdrop, modern architecture, premium wines and views'
+            },
+            'Ahuriri': {
+                zh: 'Napier的时尚海滨区，有许多餐厅、咖啡馆和精品店，骑行起点',
+                en: 'Napier\'s trendy waterfront area with many restaurants, cafes and boutiques, cycling start point'
+            },
+            'Westshore': {
+                zh: 'Napier北部的海滩，长长的沙滩适合散步，骑行的终点站',
+                en: 'Napier\'s northern beach, long sandy beach perfect for walking, cycling endpoint'
+            },
+            'Gannet Beach Adventures': {
+                zh: '乘坐拖拉机穿越海滩前往Cape Kidnappers观赏塘鹅栖息地，需提前预订，受潮汐影响',
+                en: 'Tractor ride across beach to Cape Kidnappers gannet colony, advance booking required, tide dependent'
+            },
+            'Cape Kidnappers': {
+                zh: '霍克湾著名的海角，拥有世界上最大的塘鹅栖息地之一，景色壮观',
+                en: 'Famous Hawke\'s Bay cape with one of world\'s largest gannet colonies, spectacular scenery'
+            },
+            'Splash Planet': {
+                zh: 'Hastings的大型水上主题乐园，有各种水滑梯和泳池，夏季高峰期人很多',
+                en: 'Hastings\' large water theme park with various water slides and pools, very crowded in summer peak'
+            },
+            'Te Mata Peak': {
+                zh: '399米高的山峰，可开车直达山顶，360度全景视野俯瞰霍克湾，日落绝美',
+                en: '399m peak, drive to summit, 360-degree panoramic views of Hawke\'s Bay, stunning sunsets'
+            },
+            'Tirau': {
+                zh: '奥克兰和陶波之间的创意小镇，以波纹铁皮动物建筑闻名，非常适合拍照打卡',
+                en: 'Creative town between Auckland and Taupo, famous for corrugated iron animal buildings, great for photos'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            localStorage.setItem('language', currentLang);
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            const langText = document.getElementById('langText');
+            langText.textContent = currentLang === 'zh' ? 'English' : '中文';
+
+            // Update all elements with data-zh and data-en attributes
+            document.querySelectorAll('[data-zh][data-en]').forEach(element => {
+                element.textContent = element.getAttribute('data-' + currentLang);
+            });
+
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+
+            // Update all location link tooltips
+            document.querySelectorAll('.location-link').forEach(link => {
+                const locationName = link.textContent.replace(/📍|🌐/g, '').trim();
+                const translation = locationTooltips[locationName];
+                if (translation) {
+                    link.setAttribute('data-tooltip', translation[currentLang]);
+                }
+            });
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLanguage();
+        });
+
         // Enhanced tooltip functionality with images
         const tooltip = document.getElementById('customTooltip');
         const tooltipImage = tooltip.querySelector('.tooltip-image');
