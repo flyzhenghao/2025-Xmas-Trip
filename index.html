@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 圣诞新西兰北岛自驾游 | Xmas Trip</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '✈️';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .intro {
+            padding: 40px;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            border-bottom: 3px solid #667eea;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .trip-section {
+            padding: 40px;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            margin: 0 -40px 30px -40px;
+            position: relative;
+        }
+
+        .section-header.hawkes {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .section-info {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.05em;
+        }
+
+        .day-card {
+            background: white;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .day-card.hawkes-day {
+            border-left-color: #ee0979;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .day-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .hawkes-day .day-number {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+        }
+
+        .day-title {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .activity {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .activity h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hawkes-day .activity h4 {
+            color: #ee0979;
+        }
+
+        .activity ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .activity li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .activity li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .hawkes-day .activity li::before {
+            color: #ee0979;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .todo-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .todo-section h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .todo-list {
+            list-style: none;
+        }
+
+        .todo-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid white;
+            transition: transform 0.2s ease;
+        }
+
+        .todo-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .todo-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .todo-item ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .todo-item li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .todo-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95em;
+        }
+
+        .footer-emoji {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .container {
+                border-radius: 10px;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            .trip-section, .intro {
+                padding: 20px;
+            }
+
+            .section-header {
+                margin: 0 -20px 20px -20px;
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .day-card {
+                padding: 15px;
+            }
+
+            .section-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .emoji {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎄 2025 圣诞新西兰北岛自驾游 🏔️</h1>
+            <p class="subtitle">北岛双节探险方案 | 狂野与悠闲的完美结合</p>
+        </header>
+
+        <section class="intro">
+            <p><strong>✨ 亮点：</strong>这个方案结合了<strong>西海岸的壮丽沙丘</strong>和<strong>东海岸的绝美海湾</strong>，而且把"滑沙"这个亮点加进去，14 岁的男孩子一定会觉得不虚此行！</p>
+            <p style="margin-top: 15px;">分为两段精彩旅程：<strong>北地山海与沙丘探险</strong>和<strong>霍克湾悠闲跨年</strong>，避开人挤人的热门景点，体验更狂野的自然风光。</p>
+        </section>
+
+        <!-- Northland Trip -->
+        <section class="trip-section">
+            <div class="section-header">
+                <h2 class="section-title">🏖️ 第一段：北地山海与沙丘 (Northland)</h2>
+                <div class="section-info">
+                    <div class="info-item">
+                        <span class="emoji">📅</span>
+                        <span><strong>时间：</strong>12月26日 - 12月28日（3天2晚）</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="emoji">🚗</span>
+                        <span><strong>路线：</strong>Auckland ↔ Whangārei ↔ Opononi</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="emoji">⭐</span>
+                        <span><strong>亮点：</strong>西海岸滑沙 & 巨木探险</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">1</div>
+                    <div class="day-title">12.26 (Boxing Day) 悠闲北上</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🌅 上午</h4>
+                    <ul>
+                        <li>睡个懒觉，吃个早午餐。<strong>11:00 - 11:30 出发</strong></li>
+                        <li>推荐走 <span class="highlight">SH16 (经 Helensville)</span>，风景像霍比特人夏尔，避开 SH1 Warkworth 附近的堵车地狱</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🎨 下午</h4>
+                    <ul>
+                        <li>抵达 <span class="highlight">Whangārei (旺格雷)</span></li>
+                        <li><strong>第一站：</strong>Hundertwasser Art Centre (百水艺术中心) - 楼顶有个"森林"，地板是歪的，极其适合拍照</li>
+                        <li><strong>第二站：</strong>Whangārei Falls - 步行 2 分钟就能看到经典瀑布</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🍽️ 晚餐 & 住宿</h4>
+                    <ul>
+                        <li>在 Whangārei Town Basin 码头用餐（推荐 <em>The Quay</em> 或 <em>No.8</em>）</li>
+                        <li>入住 Whangārei 市区的 Motel 或 Airbnb</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">2</div>
+                    <div class="day-title">12.27 (核心日) 穿越东西海岸 + 滑沙 🏄</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🚗 上午</h4>
+                    <ul>
+                        <li>9:00 出发，沿 SH15 转 SH12 往西海岸开（约 1小时45分）</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🌟 中午 (高光时刻)</h4>
+                    <ul>
+                        <li>抵达 <span class="highlight">Opononi</span></li>
+                        <li>去码头找 <strong>Hokianga Express</strong>（一定要提前预订 Sandboarding 船票）</li>
+                        <li><strong>体验：</strong>坐船 10 分钟跨过海港，抵达对岸巨大的金色沙山。船家提供滑沙板</li>
+                        <li>这里风景极美，像沙漠直接插入大海。滑累了可以直接下海冲凉 🏖️</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🌲 下午 (巨木)</h4>
+                    <ul>
+                        <li>滑完沙，买个炸鱼薯条（Fish & Chips）吃完</li>
+                        <li>向南开 20 分钟进入 <span class="highlight">Waipoua Forest</span></li>
+                        <li>停车走 5 分钟步道，去朝圣 <strong>Tāne Mahuta (森林之王)</strong>，新西兰最大的贝壳杉</li>
+                        <li>站在树下会感到人类的渺小，是很好的自然教育</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🌆 傍晚</h4>
+                    <ul>
+                        <li>原路返回 Whangārei</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">3</div>
+                    <div class="day-title">12.28 绝美东海岸 & 归程</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🏖️ 上午</h4>
+                    <ul>
+                        <li>退房。开车 30 分钟去 <span class="highlight">Tutukaka Coast</span></li>
+                        <li><strong>Matapouri Bay：</strong>北地最美的月牙形白沙滩，适合散步发呆</li>
+                        <li>或者去 <strong>Whale Bay</strong>（步行 15 分钟穿越树林），更私密，水清得像斐济</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🍴 午餐</h4>
+                    <ul>
+                        <li>在 Tutukaka 的 <em>Schnappa Rock</em> 餐厅吃午饭（本地人最爱）</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🏠 下午</h4>
+                    <ul>
+                        <li>启程回奥克兰（约 2.5 小时）</li>
+                        <li>回家正好休整两天，准备下一段旅程</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hawke's Bay Trip -->
+        <section class="trip-section" style="background: #fafafa;">
+            <div class="section-header hawkes">
+                <h2 class="section-title">☀️ 第二段：霍克湾阳光与骑行 (Hawke's Bay)</h2>
+                <div class="section-info">
+                    <div class="info-item">
+                        <span class="emoji">📅</span>
+                        <span><strong>时间：</strong>12月31日 - 1月4日（5天4晚）</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="emoji">🚗</span>
+                        <span><strong>路线：</strong>Auckland → Napier/Hastings → Auckland</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="emoji">⭐</span>
+                        <span><strong>亮点：</strong>阳光、复古建筑、骑行道、悠闲跨年</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1 -->
+            <div class="day-card hawkes-day">
+                <div class="day-header">
+                    <div class="day-number">1</div>
+                    <div class="day-title">12.31 (跨年夜) 长途奔袭 🎆</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🚗 行程</h4>
+                    <ul>
+                        <li>奥克兰 → Napier (约 5.5 - 6 小时)</li>
+                        <li>建议经 Taupō 稍作停留吃午饭，但这天路会比较忙，心态放平</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🌆 傍晚</h4>
+                    <ul>
+                        <li>抵达 Hawke's Bay</li>
+                        <li>建议住在 <span class="highlight">Hastings</span> 或 <span class="highlight">Havelock North</span>（比 Napier 住宿性价比高，且更有生活气息）</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🎉 跨年</h4>
+                    <ul>
+                        <li>晚上去 <strong>Napier Marine Parade</strong></li>
+                        <li>通常 Soundshell 会有免费的跨年音乐会和烟花，氛围很好</li>
+                        <li>全家人一起倒数迎接新年！</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card hawkes-day">
+                <div class="day-header">
+                    <div class="day-number">2</div>
+                    <div class="day-title">1.1 (新年) 复古与登高</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🏛️ 上午</h4>
+                    <ul>
+                        <li>睡懒觉。去 Napier 市中心逛 <span class="highlight">Art Deco</span> 建筑群</li>
+                        <li>街上可能会有人开着老爷车巡游</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>📸 打卡</h4>
+                    <ul>
+                        <li><strong>MTG Hawke's Bay (博物馆)</strong></li>
+                        <li>负一楼的 1931 大地震展厅非常震撼，不仅是看历史，更是看一种重生的力量</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🍷 下午</h4>
+                    <ul>
+                        <li>开车上 <strong>Bluff Hill Lookout</strong>，俯瞰繁忙的港口</li>
+                        <li>去 <strong>Mission Estate</strong> 或 <strong>Craggy Range</strong> 酒庄喝杯咖啡/酒</li>
+                        <li>即便不喝酒，这两个酒庄的景色也是顶级的</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card hawkes-day">
+                <div class="day-header">
+                    <div class="day-number">3</div>
+                    <div class="day-title">1.2 (运动日) 家庭骑行 🚴</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🚴 活动</h4>
+                    <ul>
+                        <li>租自行车（强烈建议租 <span class="highlight">E-bike 电动助力车</span>）</li>
+                        <li>这样 14 岁孩子可以飙车，大人也不累</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🗺️ 路线</h4>
+                    <ul>
+                        <li>推荐 <strong>"Water Ride"</strong> 路线</li>
+                        <li>从 Napier 的 Ahuriri 出发，沿着海岸线骑到 Westshore</li>
+                        <li>完全平路，海风拂面，中间有很多冰淇淋店和咖啡馆停靠点</li>
+                        <li>这是新西兰最适合家庭的骑行路线</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>📞 预订</h4>
+                    <ul>
+                        <li>推荐 <em>Napier City Bike Hire</em> 或 <em>Takaro Trails</em></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-card hawkes-day">
+                <div class="day-header">
+                    <div class="day-number">4</div>
+                    <div class="day-title">1.3 (探险日) 拖拉机看鸟 或 水上乐园</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🦅 Option A (自然奇观 - 推荐)</h4>
+                    <ul>
+                        <li>去 Clifton 参加 <span class="highlight">Gannet Beach Adventures</span></li>
+                        <li>这不是无聊的观鸟，而是<strong>坐着老式拖拉机</strong>在海滩上行驶</li>
+                        <li>前往拐子角（Cape Kidnappers）</li>
+                        <li>坐在拖拉机斗里被海浪追着跑的感觉很有趣</li>
+                        <li>最后能看到成千上万只塘鹅</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🏊 Option B (纯玩水)</h4>
+                    <ul>
+                        <li><strong>Splash Planet (Hastings)</strong></li>
+                        <li>如果你儿子喜欢玩水，这里有新西兰最好的水上滑梯</li>
+                        <li>注意：1月初人会非常非常多，排队可能很长</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🌅 傍晚 (必去)</h4>
+                    <ul>
+                        <li>开车上 <strong>Te Mata Peak (Havelock North)</strong> 看日落</li>
+                        <li>这是北岛最壮观的景色之一，无需爬山，车直达顶峰</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-card hawkes-day">
+                <div class="day-header">
+                    <div class="day-number">5</div>
+                    <div class="day-title">1.4 返程</div>
+                </div>
+
+                <div class="activity">
+                    <h4>🚗 行程</h4>
+                    <ul>
+                        <li>沿 SH5 返回</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🍽️ 午餐</h4>
+                    <ul>
+                        <li>在 <span class="highlight">Tirau</span> (波纹铁皮小镇) 停留</li>
+                        <li>打卡那些可爱的铁皮狗、铁皮羊建筑</li>
+                    </ul>
+                </div>
+
+                <div class="activity">
+                    <h4>🏠 下午</h4>
+                    <ul>
+                        <li>回到奥克兰，结束完美假期！</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- To-Do List -->
+        <section class="todo-section">
+            <h2>📝 待办事项 (To-Do List)</h2>
+
+            <div class="todo-list">
+                <div class="todo-item">
+                    <h3>🏨 1. 住宿 (紧急)</h3>
+                    <ul>
+                        <li><strong>Napier/Hastings (12.31-1.4)：</strong>这是跨年旺季，现在就去 Booking/Airbnb 锁房。搜不到 Napier 就搜 Hastings，反而更安静方便。</li>
+                        <li><strong>Whangārei (12.26-12.28)：</strong>相对好订，找 Town Basin 附近的。</li>
+                    </ul>
+                </div>
+
+                <div class="todo-item">
+                    <h3>🎫 2. 活动预订</h3>
+                    <ul>
+                        <li><strong>Hokianga Express (Opononi)：</strong>必须提前订，圣诞期间滑沙的人很多。</li>
+                        <li><strong>Gannet Beach Adventures (拖拉机)：</strong>如果选这个，也要看潮汐时间表并预订。</li>
+                    </ul>
+                </div>
+
+                <div class="todo-item">
+                    <h3>🚗 3. 车辆检查</h3>
+                    <ul>
+                        <li>出发前检查轮胎和机油</li>
+                        <li>SH5 (Napier-Taupo 公路) 弯道多，路况复杂，确保车况良好。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-emoji">🎄 ✈️ 🏖️ 🎆</div>
+            <p>这套方案既避开了"老三样"，又加入了滑沙、骑行这种少年喜欢的元素</p>
+            <p style="margin-top: 10px; opacity: 0.8;">希望你们一家有个完美的圣诞假期！</p>
+        </footer>
+    </div>
+</body>
+</html>
