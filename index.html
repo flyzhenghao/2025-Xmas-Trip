@@ -77,6 +77,23 @@
             gap: 8px;
         }
 
+        /* Mobile language switcher positioning */
+        @media (max-width: 768px) {
+            .language-switcher {
+                position: fixed;
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+                left: auto;
+            }
+
+            .lang-btn {
+                padding: 12px 18px;
+                font-size: 0.9em;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+        }
+
         .lang-btn:hover {
             background: rgba(255, 255, 255, 0.3);
             border-color: rgba(255, 255, 255, 0.5);
@@ -515,25 +532,25 @@
                 <div class="activity">
                     <h4 data-trans-key="morning">🌅 上午</h4>
                     <ul>
-                        <li>睡个懒觉，吃个早午餐。<strong>11:00 - 11:30 出发</strong></li>
-                        <li>推荐走 <span class="highlight">SH16 (经 <a href="https://www.google.com/maps/place/Helensville,+New+Zealand" target="_blank" class="location-link" data-tooltip="奥克兰西北部的小镇，风景优美，有乡村田园风光" data-image="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80">Helensville<span class="icon">📍</span></a>)</span>，风景像霍比特人夏尔，避开 SH1 Warkworth 附近的堵车地狱</li>
+                        <li data-zh="睡个懒觉，吃个早午餐。<strong>11:00 - 11:30 出发</strong>" data-en="Sleep in and have brunch. <strong>Depart 11:00 - 11:30</strong>">睡个懒觉，吃个早午餐。<strong>11:00 - 11:30 出发</strong></li>
+                        <li data-zh="推荐走 <span class='highlight'>SH16 (经 <a href='https://www.google.com/maps/place/Helensville,+New+Zealand' target='_blank' class='location-link' data-tooltip='奥克兰西北部的小镇，风景优美，有乡村田园风光' data-image='https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80'>Helensville<span class='icon'>📍</span></a>)</span>，风景像霍比特人夏尔，避开 SH1 Warkworth 附近的堵车地狱" data-en="Recommended route <span class='highlight'>SH16 (via <a href='https://www.google.com/maps/place/Helensville,+New+Zealand' target='_blank' class='location-link' data-tooltip='A charming town northwest of Auckland with beautiful rural countryside scenery' data-image='https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80'>Helensville<span class='icon'>📍</span></a>)</span>, scenery like Hobbiton Shire, avoiding SH1 Warkworth traffic hell">推荐走 <span class="highlight">SH16 (经 <a href="https://www.google.com/maps/place/Helensville,+New+Zealand" target="_blank" class="location-link" data-tooltip="奥克兰西北部的小镇，风景优美，有乡村田园风光" data-image="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80">Helensville<span class="icon">📍</span></a>)</span>，风景像霍比特人夏尔，避开 SH1 Warkworth 附近的堵车地狱</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="afternoon">🎨 下午</h4>
                     <ul>
-                        <li>抵达 <span class="highlight"><a href="https://www.google.com/maps/place/Whangarei,+New+Zealand" target="_blank" class="location-link" data-tooltip="北地区最大城市，人口约5.5万，是通往北部景点的枢纽" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Whangārei<span class="icon">📍</span></a> (旺格雷)</span></li>
-                        <li><strong>第一站：</strong><a href="https://www.google.com/maps/place/Hundertwasser+Art+Centre" target="_blank" class="location-link" data-tooltip="奥地利艺术家百水设计的独特建筑，色彩斑斓，楼顶有森林花园，地板故意设计成不平的" data-image="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80">Hundertwasser Art Centre<span class="icon">📍</span></a> (百水艺术中心) - 楼顶有个"森林"，地板是歪的，极其适合拍照</li>
-                        <li><strong>第二站：</strong><a href="https://www.google.com/maps/place/Whangarei+Falls" target="_blank" class="location-link" data-tooltip="26米高的美丽瀑布，有短步道环绕，是旺格雷最受欢迎的景点之一" data-image="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800&q=80">Whangārei Falls<span class="icon">📍</span></a> - 步行 2 分钟就能看到经典瀑布</li>
+                        <li data-zh="抵达 <span class='highlight'><a href='https://www.google.com/maps/place/Whangarei,+New+Zealand' target='_blank' class='location-link' data-tooltip='北地区最大城市，人口约5.5万，是通往北部景点的枢纽' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Whangārei<span class='icon'>📍</span></a> (旺格雷)</span>" data-en="Arrive at <span class='highlight'><a href='https://www.google.com/maps/place/Whangarei,+New+Zealand' target='_blank' class='location-link' data-tooltip='Largest city in Northland with about 55,000 people, gateway to northern attractions' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Whangārei<span class='icon'>📍</span></a></span>">抵达 <span class="highlight"><a href="https://www.google.com/maps/place/Whangarei,+New+Zealand" target="_blank" class="location-link" data-tooltip="北地区最大城市，人口约5.5万，是通往北部景点的枢纽" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Whangārei<span class="icon">📍</span></a> (旺格雷)</span></li>
+                        <li data-zh="<strong>第一站：</strong><a href='https://www.google.com/maps/place/Hundertwasser+Art+Centre' target='_blank' class='location-link' data-tooltip='奥地利艺术家百水设计的独特建筑，色彩斑斓，楼顶有森林花园，地板故意设计成不平的' data-image='https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80'>Hundertwasser Art Centre<span class='icon'>📍</span></a> (百水艺术中心) - 楼顶有个"森林"，地板是歪的，极其适合拍照" data-en="<strong>First stop:</strong> <a href='https://www.google.com/maps/place/Hundertwasser+Art+Centre' target='_blank' class='location-link' data-tooltip='Unique building designed by Austrian artist Hundertwasser, colorful with rooftop forest garden and deliberately uneven floors' data-image='https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80'>Hundertwasser Art Centre<span class='icon'>📍</span></a> - Rooftop has a 'forest', floors are deliberately crooked, perfect for photos"><strong>第一站：</strong><a href="https://www.google.com/maps/place/Hundertwasser+Art+Centre" target="_blank" class="location-link" data-tooltip="奥地利艺术家百水设计的独特建筑，色彩斑斓，楼顶有森林花园，地板故意设计成不平的" data-image="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80">Hundertwasser Art Centre<span class="icon">📍</span></a> (百水艺术中心) - 楼顶有个"森林"，地板是歪的，极其适合拍照</li>
+                        <li data-zh="<strong>第二站：</strong><a href='https://www.google.com/maps/place/Whangarei+Falls' target='_blank' class='location-link' data-tooltip='26米高的美丽瀑布，有短步道环绕，是旺格雷最受欢迎的景点之一' data-image='https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800&q=80'>Whangārei Falls<span class='icon'>📍</span></a> - 步行 2 分钟就能看到经典瀑布" data-en="<strong>Second stop:</strong> <a href='https://www.google.com/maps/place/Whangarei+Falls' target='_blank' class='location-link' data-tooltip='26-meter beautiful waterfall with short walking tracks, one of Whangārei\'s most popular attractions' data-image='https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800&q=80'>Whangārei Falls<span class='icon'>📍</span></a> - Classic waterfall just 2-minute walk"><strong>第二站：</strong><a href="https://www.google.com/maps/place/Whangarei+Falls" target="_blank" class="location-link" data-tooltip="26米高的美丽瀑布，有短步道环绕，是旺格雷最受欢迎的景点之一" data-image="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800&q=80">Whangārei Falls<span class="icon">📍</span></a> - 步行 2 分钟就能看到经典瀑布</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="evening">🍽️ 晚餐 & 住宿</h4>
                     <ul>
-                        <li>在 <a href="https://www.google.com/maps/place/Town+Basin,+Whangarei" target="_blank" class="location-link" data-tooltip="旺格雷的滨水区，有许多餐厅、咖啡馆和艺术画廊，夜晚灯光很美" data-image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80">Whangārei Town Basin<span class="icon">📍</span></a> 码头用餐（推荐 <em>The Quay</em> 或 <em>No.8</em>）</li>
-                        <li>入住 Whangārei 市区的 Motel 或 Airbnb</li>
+                        <li data-zh="在 <a href='https://www.google.com/maps/place/Town+Basin,+Whangarei' target='_blank' class='location-link' data-tooltip='旺格雷的滨水区，有许多餐厅、咖啡馆和艺术画廊，夜晚灯光很美' data-image='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'>Whangārei Town Basin<span class='icon'>📍</span></a> 码头用餐（推荐 <em>The Quay</em> 或 <em>No.8</em>）" data-en="Dinner at <a href='https://www.google.com/maps/place/Town+Basin,+Whangarei' target='_blank' class='location-link' data-tooltip='Whangārei\'s waterfront area with many restaurants, cafes and art galleries, beautifully lit at night' data-image='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'>Whangārei Town Basin<span class='icon'>📍</span></a> waterfront (recommend <em>The Quay</em> or <em>No.8</em>)">在 <a href="https://www.google.com/maps/place/Town+Basin,+Whangarei" target="_blank" class="location-link" data-tooltip="旺格雷的滨水区，有许多餐厅、咖啡馆和艺术画廊，夜晚灯光很美" data-image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80">Whangārei Town Basin<span class="icon">📍</span></a> 码头用餐（推荐 <em>The Quay</em> 或 <em>No.8</em>）</li>
+                        <li data-zh="入住 Whangārei 市区的 Motel 或 Airbnb" data-en="Stay at Motel or Airbnb in Whangārei city">入住 Whangārei 市区的 Motel 或 Airbnb</li>
                     </ul>
                 </div>
             </div>
@@ -548,34 +565,34 @@
                 <div class="activity">
                     <h4 data-trans-key="drive">🚗 上午</h4>
                     <ul>
-                        <li>9:00 出发，沿 SH15 转 SH12 往西海岸开（约 1小时45分）</li>
+                        <li data-zh="9:00 出发，沿 SH15 转 SH12 往西海岸开（约 1小时45分）" data-en="Depart 9:00 AM, take SH15 then SH12 to west coast (about 1 hour 45 minutes)">9:00 出发，沿 SH15 转 SH12 往西海岸开（约 1小时45分）</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="noon">🌟 中午 (高光时刻)</h4>
                     <ul>
-                        <li>抵达 <span class="highlight"><a href="https://www.google.com/maps/place/Opononi,+New+Zealand" target="_blank" class="location-link" data-tooltip="Hokianga海港边的小镇，以金色沙丘和海豚闻名，风景壮观" data-image="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80">Opononi<span class="icon">📍</span></a></span></li>
-                        <li>去码头找 <strong><a href="https://www.hokiangaexpress.co.nz/" target="_blank" class="location-link" data-tooltip="提供Hokianga海港游船和沙丘滑沙体验，需提前预订，受潮汐和天气影响" data-image="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80">Hokianga Express<span class="icon">🌐</span></a></strong>（一定要提前预订 Sandboarding 船票）</li>
-                        <li><strong>体验：</strong>坐船 10 分钟跨过海港，抵达对岸巨大的金色沙山。船家提供滑沙板</li>
-                        <li>这里风景极美，像沙漠直接插入大海。滑累了可以直接下海冲凉 🏖️</li>
+                        <li data-zh="抵达 <span class='highlight'><a href='https://www.google.com/maps/place/Opononi,+New+Zealand' target='_blank' class='location-link' data-tooltip='Hokianga海港边的小镇，以金色沙丘和海豚闻名，风景壮观' data-image='https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80'>Opononi<span class='icon'>📍</span></a></span>" data-en="Arrive at <span class='highlight'><a href='https://www.google.com/maps/place/Opononi,+New+Zealand' target='_blank' class='location-link' data-tooltip='Small town on Hokianga Harbour, famous for golden sand dunes and dolphins, spectacular scenery' data-image='https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80'>Opononi<span class='icon'>📍</span></a></span>">抵达 <span class="highlight"><a href="https://www.google.com/maps/place/Opononi,+New+Zealand" target="_blank" class="location-link" data-tooltip="Hokianga海港边的小镇，以金色沙丘和海豚闻名，风景壮观" data-image="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&q=80">Opononi<span class="icon">📍</span></a></span></li>
+                        <li data-zh="去码头找 <strong><a href='https://www.hokiangaexpress.co.nz/' target='_blank' class='location-link' data-tooltip='提供Hokianga海港游船和沙丘滑沙体验，需提前预订，受潮汐和天气影响' data-image='https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80'>Hokianga Express<span class='icon'>🌐</span></a></strong>（一定要提前预订 Sandboarding 船票）" data-en="Go to the wharf to find <strong><a href='https://www.hokiangaexpress.co.nz/' target='_blank' class='location-link' data-tooltip='Provides Hokianga Harbour cruises and sand dune boarding experiences, advance booking required, tide and weather dependent' data-image='https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80'>Hokianga Express<span class='icon'>🌐</span></a></strong> (must book Sandboarding tickets in advance)">去码头找 <strong><a href="https://www.hokiangaexpress.co.nz/" target="_blank" class="location-link" data-tooltip="提供Hokianga海港游船和沙丘滑沙体验，需提前预订，受潮汐和天气影响" data-image="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=80">Hokianga Express<span class="icon">🌐</span></a></strong>（一定要提前预订 Sandboarding 船票）</li>
+                        <li data-zh="<strong>体验：</strong>坐船 10 分钟跨过海港，抵达对岸巨大的金色沙山。船家提供滑沙板" data-en="<strong>Experience:</strong> 10-minute boat ride across the harbour to reach the massive golden sand dunes on the other side. Boards provided by boat operator"><strong>体验：</strong>坐船 10 分钟跨过海港，抵达对岸巨大的金色沙山。船家提供滑沙板</li>
+                        <li data-zh="这里风景极美，像沙漠直接插入大海。滑累了可以直接下海冲凉 🏖️" data-en="Scenery is stunning here, like a desert meeting the ocean. When tired of sandboarding, cool off directly in the sea 🏖️">这里风景极美，像沙漠直接插入大海。滑累了可以直接下海冲凉 🏖️</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="afternoonTree">🌲 下午 (巨木)</h4>
                     <ul>
-                        <li>滑完沙，买个炸鱼薯条（Fish & Chips）吃完</li>
-                        <li>向南开 20 分钟进入 <span class="highlight"><a href="https://www.google.com/maps/place/Waipoua+Forest" target="_blank" class="location-link" data-tooltip="新西兰最大的贝壳杉森林保护区，拥有古老的巨树，氛围神秘庄严" data-image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80">Waipoua Forest<span class="icon">📍</span></a></span></li>
-                        <li>停车走 5 分钟步道，去朝圣 <strong><a href="https://www.google.com/maps/place/Tane+Mahuta" target="_blank" class="location-link" data-tooltip="新西兰最大的贝壳杉树，树龄约2000年，树干周长13.8米，高51米，被毛利人尊为森林之神" data-image="https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=80">Tāne Mahuta<span class="icon">📍</span></a> (森林之王)</strong>，新西兰最大的贝壳杉</li>
-                        <li>站在树下会感到人类的渺小，是很好的自然教育</li>
+                        <li data-zh="滑完沙，买个炸鱼薯条（Fish & Chips）吃完" data-en="After sandboarding, grab some Fish & Chips">滑完沙，买个炸鱼薯条（Fish & Chips）吃完</li>
+                        <li data-zh="向南开 20 分钟进入 <span class='highlight'><a href='https://www.google.com/maps/place/Waipoua+Forest' target='_blank' class='location-link' data-tooltip='新西兰最大的贝壳杉森林保护区，拥有古老的巨树，氛围神秘庄严' data-image='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'>Waipoua Forest<span class='icon'>📍</span></a></span>" data-en="Drive 20 minutes south into <span class='highlight'><a href='https://www.google.com/maps/place/Waipoua+Forest' target='_blank' class='location-link' data-tooltip='New Zealand\'s largest kauri forest reserve with ancient giant trees, mysterious and solemn atmosphere' data-image='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'>Waipoua Forest<span class='icon'>📍</span></a></span>">向南开 20 分钟进入 <span class="highlight"><a href="https://www.google.com/maps/place/Waipoua+Forest" target="_blank" class="location-link" data-tooltip="新西兰最大的贝壳杉森林保护区，拥有古老的巨树，氛围神秘庄严" data-image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80">Waipoua Forest<span class="icon">📍</span></a></span></li>
+                        <li data-zh="停车走 5 分钟步道，去朝圣 <strong><a href='https://www.google.com/maps/place/Tane+Mahuta' target='_blank' class='location-link' data-tooltip='新西兰最大的贝壳杉树，树龄约2000年，树干周长13.8米，高51米，被毛利人尊为森林之神' data-image='https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=80'>Tāne Mahuta<span class='icon'>📍</span></a> (森林之王)</strong>，新西兰最大的贝壳杉" data-en="Park and walk 5-minute track to visit <strong><a href='https://www.google.com/maps/place/Tane+Mahuta' target='_blank' class='location-link' data-tooltip='New Zealand\'s largest kauri tree, about 2000 years old, 13.8m girth, 51m tall, revered by Māori as the god of the forest' data-image='https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=80'>Tāne Mahuta<span class='icon'>📍</span></a> (Lord of the Forest)</strong>, New Zealand's largest kauri tree">停车走 5 分钟步道，去朝圣 <strong><a href="https://www.google.com/maps/place/Tane+Mahuta" target="_blank" class="location-link" data-tooltip="新西兰最大的贝壳杉树，树龄约2000年，树干周长13.8米，高51米，被毛利人尊为森林之神" data-image="https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=80">Tāne Mahuta<span class="icon">📍</span></a> (森林之王)</strong>，新西兰最大的贝壳杉</li>
+                        <li data-zh="站在树下会感到人类的渺小，是很好的自然教育" data-en="Standing beneath it makes you feel the smallness of humanity, excellent nature education">站在树下会感到人类的渺小，是很好的自然教育</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="dusk">🌆 傍晚</h4>
                     <ul>
-                        <li>原路返回 Whangārei</li>
+                        <li data-zh="原路返回 Whangārei" data-en="Return to Whangārei via same route">原路返回 Whangārei</li>
                     </ul>
                 </div>
             </div>
@@ -590,24 +607,24 @@
                 <div class="activity">
                     <h4 data-trans-key="beach">🏖️ 上午</h4>
                     <ul>
-                        <li>退房。开车 30 分钟去 <span class="highlight"><a href="https://www.google.com/maps/place/Tutukaka+Coast" target="_blank" class="location-link" data-tooltip="北地最美的海岸线之一，拥有多个绝美海湾，水质清澈，是潜水圣地" data-image="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80">Tutukaka Coast<span class="icon">📍</span></a></span></li>
-                        <li><strong><a href="https://www.google.com/maps/place/Matapouri+Bay" target="_blank" class="location-link" data-tooltip="北地最受欢迎的月牙形海湾之一，白沙滩，碧绿海水，适合游泳和放松" data-image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80">Matapouri Bay<span class="icon">📍</span></a>：</strong>北地最美的月牙形白沙滩，适合散步发呆</li>
-                        <li>或者去 <strong><a href="https://www.google.com/maps/place/Whale+Bay,+Tutukaka" target="_blank" class="location-link" data-tooltip="隐藏的宝石海湾，需步行15分钟穿越森林步道，人少景美，水质极佳" data-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80">Whale Bay<span class="icon">📍</span></a></strong>（步行 15 分钟穿越树林），更私密，水清得像斐济</li>
+                        <li data-zh="退房。开车 30 分钟去 <span class='highlight'><a href='https://www.google.com/maps/place/Tutukaka+Coast' target='_blank' class='location-link' data-tooltip='北地最美的海岸线之一，拥有多个绝美海湾，水质清澈，是潜水圣地' data-image='https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80'>Tutukaka Coast<span class='icon'>📍</span></a></span>" data-en="Check out. Drive 30 minutes to <span class='highlight'><a href='https://www.google.com/maps/place/Tutukaka+Coast' target='_blank' class='location-link' data-tooltip='One of Northland\'s most beautiful coastlines with stunning bays, crystal clear waters, diving paradise' data-image='https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80'>Tutukaka Coast<span class='icon'>📍</span></a></span>">退房。开车 30 分钟去 <span class="highlight"><a href="https://www.google.com/maps/place/Tutukaka+Coast" target="_blank" class="location-link" data-tooltip="北地最美的海岸线之一，拥有多个绝美海湾，水质清澈，是潜水圣地" data-image="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80">Tutukaka Coast<span class="icon">📍</span></a></span></li>
+                        <li data-zh="<strong><a href='https://www.google.com/maps/place/Matapouri+Bay' target='_blank' class='location-link' data-tooltip='北地最受欢迎的月牙形海湾之一，白沙滩，碧绿海水，适合游泳和放松' data-image='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'>Matapouri Bay<span class='icon'>📍</span></a>：</strong>北地最美的月牙形白沙滩，适合散步发呆" data-en="<strong><a href='https://www.google.com/maps/place/Matapouri+Bay' target='_blank' class='location-link' data-tooltip='One of Northland\'s most popular crescent-shaped bays, white sandy beach, turquoise waters, perfect for swimming and relaxing' data-image='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'>Matapouri Bay<span class='icon'>📍</span></a>:</strong> Northland's most beautiful crescent-shaped white sand beach, perfect for walking and relaxing"><strong><a href="https://www.google.com/maps/place/Matapouri+Bay" target="_blank" class="location-link" data-tooltip="北地最受欢迎的月牙形海湾之一，白沙滩，碧绿海水，适合游泳和放松" data-image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80">Matapouri Bay<span class="icon">📍</span></a>：</strong>北地最美的月牙形白沙滩，适合散步发呆</li>
+                        <li data-zh="或者去 <strong><a href='https://www.google.com/maps/place/Whale+Bay,+Tutukaka' target='_blank' class='location-link' data-tooltip='隐藏的宝石海湾，需步行15分钟穿越森林步道，人少景美，水质极佳' data-image='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'>Whale Bay<span class='icon'>📍</span></a></strong>（步行 15 分钟穿越树林），更私密，水清得像斐济" data-en="Or visit <strong><a href='https://www.google.com/maps/place/Whale+Bay,+Tutukaka' target='_blank' class='location-link' data-tooltip='Hidden gem bay, 15-minute walk through forest track, uncrowded with beautiful scenery and excellent water quality' data-image='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'>Whale Bay<span class='icon'>📍</span></a></strong> (15-minute walk through forest), more secluded, water as clear as Fiji">或者去 <strong><a href="https://www.google.com/maps/place/Whale+Bay,+Tutukaka" target="_blank" class="location-link" data-tooltip="隐藏的宝石海湾，需步行15分钟穿越森林步道，人少景美，水质极佳" data-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80">Whale Bay<span class="icon">📍</span></a></strong>（步行 15 分钟穿越树林），更私密，水清得像斐济</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="lunch">🍴 午餐</h4>
                     <ul>
-                        <li>在 Tutukaka 的 <em>Schnappa Rock</em> 餐厅吃午饭（本地人最爱）</li>
+                        <li data-zh="在 Tutukaka 的 <em>Schnappa Rock</em> 餐厅吃午饭（本地人最爱）" data-en="Lunch at <em>Schnappa Rock</em> restaurant in Tutukaka (local favorite)">在 Tutukaka 的 <em>Schnappa Rock</em> 餐厅吃午饭（本地人最爱）</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="returnHome">🏠 下午</h4>
                     <ul>
-                        <li>启程回奥克兰（约 2.5 小时）</li>
-                        <li>回家正好休整两天，准备下一段旅程</li>
+                        <li data-zh="启程回奥克兰（约 2.5 小时）" data-en="Head back to Auckland (about 2.5 hours)">启程回奥克兰（约 2.5 小时）</li>
+                        <li data-zh="回家正好休整两天，准备下一段旅程" data-en="Perfect timing to rest for two days before the next journey">回家正好休整两天，准备下一段旅程</li>
                     </ul>
                 </div>
             </div>
@@ -643,25 +660,25 @@
                 <div class="activity">
                     <h4 data-trans-key="journey">🚗 行程</h4>
                     <ul>
-                        <li>奥克兰 → <a href="https://www.google.com/maps/place/Napier,+New+Zealand" target="_blank" class="location-link" data-tooltip="霍克湾最大城市，以Art Deco建筑闻名，1931年大地震后重建，充满复古魅力" data-image="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80">Napier<span class="icon">📍</span></a> (约 5.5 - 6 小时)</li>
-                        <li>建议经 <a href="https://www.google.com/maps/place/Taupo,+New+Zealand" target="_blank" class="location-link" data-tooltip="北岛中部湖滨城市，坐落在新西兰最大湖泊陶波湖畔，适合中途休息" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Taupō<span class="icon">📍</span></a> 稍作停留吃午饭，但这天路会比较忙，心态放平</li>
+                        <li data-zh="奥克兰 → <a href='https://www.google.com/maps/place/Napier,+New+Zealand' target='_blank' class='location-link' data-tooltip='霍克湾最大城市，以Art Deco建筑闻名，1931年大地震后重建，充满复古魅力' data-image='https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80'>Napier<span class='icon'>📍</span></a> (约 5.5 - 6 小时)" data-en="Auckland → <a href='https://www.google.com/maps/place/Napier,+New+Zealand' target='_blank' class='location-link' data-tooltip='Hawke\'s Bay\'s largest city, famous for Art Deco architecture, rebuilt after 1931 earthquake, full of vintage charm' data-image='https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80'>Napier<span class='icon'>📍</span></a> (about 5.5 - 6 hours)">奥克兰 → <a href="https://www.google.com/maps/place/Napier,+New+Zealand" target="_blank" class="location-link" data-tooltip="霍克湾最大城市，以Art Deco建筑闻名，1931年大地震后重建，充满复古魅力" data-image="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=800&q=80">Napier<span class="icon">📍</span></a> (约 5.5 - 6 小时)</li>
+                        <li data-zh="建议经 <a href='https://www.google.com/maps/place/Taupo,+New+Zealand' target='_blank' class='location-link' data-tooltip='北岛中部湖滨城市，坐落在新西兰最大湖泊陶波湖畔，适合中途休息' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Taupō<span class='icon'>📍</span></a> 稍作停留吃午饭，但这天路会比较忙，心态放平" data-en="Recommend stopping at <a href='https://www.google.com/maps/place/Taupo,+New+Zealand' target='_blank' class='location-link' data-tooltip='Central North Island lakeside city on New Zealand\'s largest lake, perfect rest stop' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Taupō<span class='icon'>📍</span></a> for lunch, but it's a long drive so stay relaxed">建议经 <a href="https://www.google.com/maps/place/Taupo,+New+Zealand" target="_blank" class="location-link" data-tooltip="北岛中部湖滨城市，坐落在新西兰最大湖泊陶波湖畔，适合中途休息" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Taupō<span class="icon">📍</span></a> 稍作停留吃午饭，但这天路会比较忙，心态放平</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="arrival">🌆 傍晚</h4>
                     <ul>
-                        <li>抵达 Hawke's Bay</li>
-                        <li>建议住在 <span class="highlight"><a href="https://www.google.com/maps/place/Hastings,+New+Zealand" target="_blank" class="location-link" data-tooltip="霍克湾第二大城市，距Napier 20分钟车程，住宿性价比更高，生活气息浓" data-image="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80">Hastings<span class="icon">📍</span></a></span> 或 <span class="highlight"><a href="https://www.google.com/maps/place/Havelock+North,+New+Zealand" target="_blank" class="location-link" data-tooltip="霍克湾的精品小镇，靠近Te Mata Peak，有很多咖啡馆和特色小店" data-image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80">Havelock North<span class="icon">📍</span></a></span>（比 Napier 住宿性价比高，且更有生活气息）</li>
+                        <li data-zh="抵达 Hawke's Bay" data-en="Arrive at Hawke's Bay">抵达 Hawke's Bay</li>
+                        <li data-zh="建议住在 <span class='highlight'><a href='https://www.google.com/maps/place/Hastings,+New+Zealand' target='_blank' class='location-link' data-tooltip='霍克湾第二大城市，距Napier 20分钟车程，住宿性价比更高，生活气息浓' data-image='https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80'>Hastings<span class='icon'>📍</span></a></span> 或 <span class='highlight'><a href='https://www.google.com/maps/place/Havelock+North,+New+Zealand' target='_blank' class='location-link' data-tooltip='霍克湾的精品小镇，靠近Te Mata Peak，有很多咖啡馆和特色小店' data-image='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'>Havelock North<span class='icon'>📍</span></a></span>（比 Napier 住宿性价比高，且更有生活气息）" data-en="Recommend staying in <span class='highlight'><a href='https://www.google.com/maps/place/Hastings,+New+Zealand' target='_blank' class='location-link' data-tooltip='Hawke\'s Bay\'s second largest city, 20 minutes from Napier, better accommodation value, vibrant local atmosphere' data-image='https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80'>Hastings<span class='icon'>📍</span></a></span> or <span class='highlight'><a href='https://www.google.com/maps/place/Havelock+North,+New+Zealand' target='_blank' class='location-link' data-tooltip='Hawke\'s Bay\'s boutique town near Te Mata Peak, many cafes and specialty shops' data-image='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'>Havelock North<span class='icon'>📍</span></a></span> (better value than Napier, more local atmosphere)">建议住在 <span class="highlight"><a href="https://www.google.com/maps/place/Hastings,+New+Zealand" target="_blank" class="location-link" data-tooltip="霍克湾第二大城市，距Napier 20分钟车程，住宿性价比更高，生活气息浓" data-image="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80">Hastings<span class="icon">📍</span></a></span> 或 <span class="highlight"><a href="https://www.google.com/maps/place/Havelock+North,+New+Zealand" target="_blank" class="location-link" data-tooltip="霍克湾的精品小镇，靠近Te Mata Peak，有很多咖啡馆和特色小店" data-image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80">Havelock North<span class="icon">📍</span></a></span>（比 Napier 住宿性价比高，且更有生活气息）</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="newYear">🎉 跨年</h4>
                     <ul>
-                        <li>晚上去 <strong><a href="https://www.google.com/maps/place/Marine+Parade,+Napier" target="_blank" class="location-link" data-tooltip="Napier的海滨大道，跨年夜有音乐会和烟花表演，氛围热闹" data-image="https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80">Napier Marine Parade<span class="icon">📍</span></a></strong></li>
-                        <li>通常 Soundshell 会有免费的跨年音乐会和烟花，氛围很好</li>
-                        <li>全家人一起倒数迎接新年！</li>
+                        <li data-zh="晚上去 <strong><a href='https://www.google.com/maps/place/Marine+Parade,+Napier' target='_blank' class='location-link' data-tooltip='Napier的海滨大道，跨年夜有音乐会和烟花表演，氛围热闹' data-image='https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80'>Napier Marine Parade<span class='icon'>📍</span></a></strong>" data-en="Evening at <strong><a href='https://www.google.com/maps/place/Marine+Parade,+Napier' target='_blank' class='location-link' data-tooltip='Napier\'s seafront promenade, New Year\'s Eve concerts and fireworks, lively atmosphere' data-image='https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80'>Napier Marine Parade<span class='icon'>📍</span></a></strong>">晚上去 <strong><a href="https://www.google.com/maps/place/Marine+Parade,+Napier" target="_blank" class="location-link" data-tooltip="Napier的海滨大道，跨年夜有音乐会和烟花表演，氛围热闹" data-image="https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80">Napier Marine Parade<span class="icon">📍</span></a></strong></li>
+                        <li data-zh="通常 Soundshell 会有免费的跨年音乐会和烟花，氛围很好" data-en="Usually free New Year's concert and fireworks at Soundshell, great atmosphere">通常 Soundshell 会有免费的跨年音乐会和烟花，氛围很好</li>
+                        <li data-zh="全家人一起倒数迎接新年！" data-en="Count down to New Year together as a family!">全家人一起倒数迎接新年！</li>
                     </ul>
                 </div>
             </div>
@@ -676,25 +693,25 @@
                 <div class="activity">
                     <h4 data-trans-key="morning">🏛️ 上午</h4>
                     <ul>
-                        <li>睡懒觉。去 Napier 市中心逛 <span class="highlight">Art Deco</span> 建筑群</li>
-                        <li>街上可能会有人开着老爷车巡游</li>
+                        <li data-zh="睡懒觉。去 Napier 市中心逛 <span class='highlight'>Art Deco</span> 建筑群" data-en="Sleep in. Explore <span class='highlight'>Art Deco</span> architecture in Napier city center">睡懒觉。去 Napier 市中心逛 <span class="highlight">Art Deco</span> 建筑群</li>
+                        <li data-zh="街上可能会有人开着老爷车巡游" data-en="May see people cruising around in vintage cars on the streets">街上可能会有人开着老爷车巡游</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="checkin">📸 打卡</h4>
                     <ul>
-                        <li><strong><a href="https://www.google.com/maps/place/MTG+Hawke's+Bay" target="_blank" class="location-link" data-tooltip="霍克湾博物馆和美术馆，1931大地震展厅震撼人心，展示Napier如何浴火重生" data-image="https://images.unsplash.com/photo-1566127444979-b3d2b654e3a6?w=800&q=80">MTG Hawke's Bay<span class="icon">📍</span></a> (博物馆)</strong></li>
-                        <li>负一楼的 1931 大地震展厅非常震撼，不仅是看历史，更是看一种重生的力量</li>
+                        <li data-zh="<strong><a href='https://www.google.com/maps/place/MTG+Hawke\'s+Bay' target='_blank' class='location-link' data-tooltip='霍克湾博物馆和美术馆，1931大地震展厅震撼人心，展示Napier如何浴火重生' data-image='https://images.unsplash.com/photo-1566127444979-b3d2b654e3a6?w=800&q=80'>MTG Hawke\'s Bay<span class='icon'>📍</span></a> (博物馆)</strong>" data-en="<strong><a href='https://www.google.com/maps/place/MTG+Hawke\'s+Bay' target='_blank' class='location-link' data-tooltip='Hawke\'s Bay Museum and Art Gallery, stunning 1931 earthquake exhibition showing Napier\'s rebirth' data-image='https://images.unsplash.com/photo-1566127444979-b3d2b654e3a6?w=800&q=80'>MTG Hawke\'s Bay<span class='icon'>📍</span></a> (Museum)</strong>"><strong><a href="https://www.google.com/maps/place/MTG+Hawke's+Bay" target="_blank" class="location-link" data-tooltip="霍克湾博物馆和美术馆，1931大地震展厅震撼人心，展示Napier如何浴火重生" data-image="https://images.unsplash.com/photo-1566127444979-b3d2b654e3a6?w=800&q=80">MTG Hawke's Bay<span class="icon">📍</span></a> (博物馆)</strong></li>
+                        <li data-zh="负一楼的 1931 大地震展厅非常震撼，不仅是看历史，更是看一种重生的力量" data-en="The 1931 earthquake exhibition on the lower level is stunning, not just history but a story of rebirth and resilience">负一楼的 1931 大地震展厅非常震撼，不仅是看历史，更是看一种重生的力量</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="wine">🍷 下午</h4>
                     <ul>
-                        <li>开车上 <strong><a href="https://www.google.com/maps/place/Bluff+Hill+Lookout" target="_blank" class="location-link" data-tooltip="Napier的最佳观景点，可以360度俯瞰城市、港口和海岸线" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Bluff Hill Lookout<span class="icon">📍</span></a></strong>，俯瞰繁忙的港口</li>
-                        <li>去 <strong><a href="https://www.google.com/maps/place/Mission+Estate+Winery" target="_blank" class="location-link" data-tooltip="新西兰最古老的酒庄（1851年），环境优美，餐厅和品酒室景观一流" data-image="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80">Mission Estate<span class="icon">📍</span></a></strong> 或 <strong><a href="https://www.google.com/maps/place/Craggy+Range+Winery" target="_blank" class="location-link" data-tooltip="精品酒庄，以Te Mata Peak为背景，建筑设计现代，葡萄酒和景色都是顶级" data-image="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80">Craggy Range<span class="icon">📍</span></a></strong> 酒庄喝杯咖啡/酒</li>
-                        <li>即便不喝酒，这两个酒庄的景色也是顶级的</li>
+                        <li data-zh="开车上 <strong><a href='https://www.google.com/maps/place/Bluff+Hill+Lookout' target='_blank' class='location-link' data-tooltip='Napier的最佳观景点，可以360度俯瞰城市、港口和海岸线' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Bluff Hill Lookout<span class='icon'>📍</span></a></strong>，俯瞰繁忙的港口" data-en="Drive up to <strong><a href='https://www.google.com/maps/place/Bluff+Hill+Lookout' target='_blank' class='location-link' data-tooltip='Napier\'s best viewpoint, 360-degree views of city, port and coastline' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Bluff Hill Lookout<span class='icon'>📍</span></a></strong>, overlook the busy port">开车上 <strong><a href="https://www.google.com/maps/place/Bluff+Hill+Lookout" target="_blank" class="location-link" data-tooltip="Napier的最佳观景点，可以360度俯瞰城市、港口和海岸线" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Bluff Hill Lookout<span class="icon">📍</span></a></strong>，俯瞰繁忙的港口</li>
+                        <li data-zh="去 <strong><a href='https://www.google.com/maps/place/Mission+Estate+Winery' target='_blank' class='location-link' data-tooltip='新西兰最古老的酒庄（1851年），环境优美，餐厅和品酒室景观一流' data-image='https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'>Mission Estate<span class='icon'>📍</span></a></strong> 或 <strong><a href='https://www.google.com/maps/place/Craggy+Range+Winery' target='_blank' class='location-link' data-tooltip='精品酒庄，以Te Mata Peak为背景，建筑设计现代，葡萄酒和景色都是顶级' data-image='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80'>Craggy Range<span class='icon'>📍</span></a></strong> 酒庄喝杯咖啡/酒" data-en="Visit <strong><a href='https://www.google.com/maps/place/Mission+Estate+Winery' target='_blank' class='location-link' data-tooltip='New Zealand\'s oldest winery (1851), beautiful setting, excellent restaurant and tasting room views' data-image='https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'>Mission Estate<span class='icon'>📍</span></a></strong> or <strong><a href='https://www.google.com/maps/place/Craggy+Range+Winery' target='_blank' class='location-link' data-tooltip='Boutique winery with Te Mata Peak backdrop, modern architecture, premium wines and views' data-image='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80'>Craggy Range<span class='icon'>📍</span></a></strong> winery for coffee/wine">去 <strong><a href="https://www.google.com/maps/place/Mission+Estate+Winery" target="_blank" class="location-link" data-tooltip="新西兰最古老的酒庄（1851年），环境优美，餐厅和品酒室景观一流" data-image="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80">Mission Estate<span class="icon">📍</span></a></strong> 或 <strong><a href="https://www.google.com/maps/place/Craggy+Range+Winery" target="_blank" class="location-link" data-tooltip="精品酒庄，以Te Mata Peak为背景，建筑设计现代，葡萄酒和景色都是顶级" data-image="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80">Craggy Range<span class="icon">📍</span></a></strong> 酒庄喝杯咖啡/酒</li>
+                        <li data-zh="即便不喝酒，这两个酒庄的景色也是顶级的" data-en="Even if you don't drink, these two wineries have spectacular views">即便不喝酒，这两个酒庄的景色也是顶级的</li>
                     </ul>
                 </div>
             </div>
@@ -709,25 +726,25 @@
                 <div class="activity">
                     <h4 data-trans-key="cycling">🚴 活动</h4>
                     <ul>
-                        <li>租自行车（强烈建议租 <span class="highlight">E-bike 电动助力车</span>）</li>
-                        <li>这样 14 岁孩子可以飙车，大人也不累</li>
+                        <li data-zh="租自行车（强烈建议租 <span class='highlight'>E-bike 电动助力车</span>）" data-en="Rent bicycles (strongly recommend <span class='highlight'>E-bikes</span>)">租自行车（强烈建议租 <span class="highlight">E-bike 电动助力车</span>）</li>
+                        <li data-zh="这样 14 岁孩子可以飙车，大人也不累" data-en="This way the 14-year-old can go fast, while adults stay comfortable">这样 14 岁孩子可以飙车，大人也不累</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="cyclingRoute">🗺️ 路线</h4>
                     <ul>
-                        <li>推荐 <strong>"Water Ride"</strong> 路线</li>
-                        <li>从 Napier 的 <a href="https://www.google.com/maps/place/Ahuriri,+Napier" target="_blank" class="location-link" data-tooltip="Napier的时尚海滨区，有许多餐厅、咖啡馆和精品店，骑行起点" data-image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80">Ahuriri<span class="icon">📍</span></a> 出发，沿着海岸线骑到 <a href="https://www.google.com/maps/place/Westshore+Beach" target="_blank" class="location-link" data-tooltip="Napier北部的海滩，长长的沙滩适合散步，骑行的终点站" data-image="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80">Westshore<span class="icon">📍</span></a></li>
-                        <li>完全平路，海风拂面，中间有很多冰淇淋店和咖啡馆停靠点</li>
-                        <li>这是新西兰最适合家庭的骑行路线</li>
+                        <li data-zh="推荐 <strong>\"Water Ride\"</strong> 路线" data-en="Recommend the <strong>\"Water Ride\"</strong> route">推荐 <strong>"Water Ride"</strong> 路线</li>
+                        <li data-zh="从 Napier 的 <a href='https://www.google.com/maps/place/Ahuriri,+Napier' target='_blank' class='location-link' data-tooltip='Napier的时尚海滨区，有许多餐厅、咖啡馆和精品店，骑行起点' data-image='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'>Ahuriri<span class='icon'>📍</span></a> 出发，沿着海岸线骑到 <a href='https://www.google.com/maps/place/Westshore+Beach' target='_blank' class='location-link' data-tooltip='Napier北部的海滩，长长的沙滩适合散步，骑行的终点站' data-image='https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80'>Westshore<span class='icon'>📍</span></a>" data-en="Start from <a href='https://www.google.com/maps/place/Ahuriri,+Napier' target='_blank' class='location-link' data-tooltip='Napier\'s trendy waterfront area with many restaurants, cafes and boutiques, cycling start point' data-image='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'>Ahuriri<span class='icon'>📍</span></a> in Napier, ride along the coastline to <a href='https://www.google.com/maps/place/Westshore+Beach' target='_blank' class='location-link' data-tooltip='Napier\'s northern beach, long sandy beach perfect for walking, cycling endpoint' data-image='https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80'>Westshore<span class='icon'>📍</span></a>">从 Napier 的 <a href="https://www.google.com/maps/place/Ahuriri,+Napier" target="_blank" class="location-link" data-tooltip="Napier的时尚海滨区，有许多餐厅、咖啡馆和精品店，骑行起点" data-image="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80">Ahuriri<span class="icon">📍</span></a> 出发，沿着海岸线骑到 <a href="https://www.google.com/maps/place/Westshore+Beach" target="_blank" class="location-link" data-tooltip="Napier北部的海滩，长长的沙滩适合散步，骑行的终点站" data-image="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80">Westshore<span class="icon">📍</span></a></li>
+                        <li data-zh="完全平路，海风拂面，中间有很多冰淇淋店和咖啡馆停靠点" data-en="Completely flat route, ocean breeze, many ice cream shops and cafes along the way">完全平路，海风拂面，中间有很多冰淇淋店和咖啡馆停靠点</li>
+                        <li data-zh="这是新西兰最适合家庭的骑行路线" data-en="This is New Zealand's most family-friendly cycling route">这是新西兰最适合家庭的骑行路线</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="booking">📞 预订</h4>
                     <ul>
-                        <li>推荐 <em>Napier City Bike Hire</em> 或 <em>Takaro Trails</em></li>
+                        <li data-zh="推荐 <em>Napier City Bike Hire</em> 或 <em>Takaro Trails</em>" data-en="Recommend <em>Napier City Bike Hire</em> or <em>Takaro Trails</em>">推荐 <em>Napier City Bike Hire</em> 或 <em>Takaro Trails</em></li>
                     </ul>
                 </div>
             </div>
@@ -742,28 +759,28 @@
                 <div class="activity">
                     <h4 data-trans-key="optionA">🦅 Option A (自然奇观 - 推荐)</h4>
                     <ul>
-                        <li>去 Clifton 参加 <span class="highlight"><a href="https://www.gannetbeachadventures.com/" target="_blank" class="location-link" data-tooltip="乘坐拖拉机穿越海滩前往Cape Kidnappers观赏塘鹅栖息地，需提前预订，受潮汐影响" data-image="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80">Gannet Beach Adventures<span class="icon">🌐</span></a></span></li>
-                        <li>这不是无聊的观鸟，而是<strong>坐着老式拖拉机</strong>在海滩上行驶</li>
-                        <li>前往拐子角（<a href="https://www.google.com/maps/place/Cape+Kidnappers" target="_blank" class="location-link" data-tooltip="霍克湾著名的海角，拥有世界上最大的塘鹅栖息地之一，景色壮观" data-image="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80">Cape Kidnappers<span class="icon">📍</span></a>）</li>
-                        <li>坐在拖拉机斗里被海浪追着跑的感觉很有趣</li>
-                        <li>最后能看到成千上万只塘鹅</li>
+                        <li data-zh="去 Clifton 参加 <span class='highlight'><a href='https://www.gannetbeachadventures.com/' target='_blank' class='location-link' data-tooltip='乘坐拖拉机穿越海滩前往Cape Kidnappers观赏塘鹅栖息地，需提前预订，受潮汐影响' data-image='https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80'>Gannet Beach Adventures<span class='icon'>🌐</span></a></span>" data-en="Join <span class='highlight'><a href='https://www.gannetbeachadventures.com/' target='_blank' class='location-link' data-tooltip='Tractor ride across beach to Cape Kidnappers gannet colony, advance booking required, tide dependent' data-image='https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80'>Gannet Beach Adventures<span class='icon'>🌐</span></a></span> at Clifton">去 Clifton 参加 <span class="highlight"><a href="https://www.gannetbeachadventures.com/" target="_blank" class="location-link" data-tooltip="乘坐拖拉机穿越海滩前往Cape Kidnappers观赏塘鹅栖息地，需提前预订，受潮汐影响" data-image="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80">Gannet Beach Adventures<span class="icon">🌐</span></a></span></li>
+                        <li data-zh="这不是无聊的观鸟，而是<strong>坐着老式拖拉机</strong>在海滩上行驶" data-en="This is not boring bird watching, but <strong>riding a vintage tractor</strong> across the beach">这不是无聊的观鸟，而是<strong>坐着老式拖拉机</strong>在海滩上行驶</li>
+                        <li data-zh="前往拐子角（<a href='https://www.google.com/maps/place/Cape+Kidnappers' target='_blank' class='location-link' data-tooltip='霍克湾著名的海角，拥有世界上最大的塘鹅栖息地之一，景色壮观' data-image='https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80'>Cape Kidnappers<span class='icon'>📍</span></a>）" data-en="Head to (<a href='https://www.google.com/maps/place/Cape+Kidnappers' target='_blank' class='location-link' data-tooltip='Famous Hawke\'s Bay cape with one of world\'s largest gannet colonies, spectacular scenery' data-image='https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80'>Cape Kidnappers<span class='icon'>📍</span></a>)">前往拐子角（<a href="https://www.google.com/maps/place/Cape+Kidnappers" target="_blank" class="location-link" data-tooltip="霍克湾著名的海角，拥有世界上最大的塘鹅栖息地之一，景色壮观" data-image="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80">Cape Kidnappers<span class="icon">📍</span></a>）</li>
+                        <li data-zh="坐在拖拉机斗里被海浪追着跑的感觉很有趣" data-en="The feeling of sitting in the tractor trailer being chased by waves is thrilling">坐在拖拉机斗里被海浪追着跑的感觉很有趣</li>
+                        <li data-zh="最后能看到成千上万只塘鹅" data-en="Finally see thousands of gannets">最后能看到成千上万只塘鹅</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="optionB">🏊 Option B (纯玩水)</h4>
                     <ul>
-                        <li><strong><a href="https://www.google.com/maps/place/Splash+Planet" target="_blank" class="location-link" data-tooltip="Hastings的大型水上主题乐园，有各种水滑梯和泳池，夏季高峰期人很多" data-image="https://images.unsplash.com/photo-1561207406-2aa22cc05a26?w=800&q=80">Splash Planet<span class="icon">📍</span></a> (Hastings)</strong></li>
-                        <li>如果你儿子喜欢玩水，这里有新西兰最好的水上滑梯</li>
-                        <li>注意：1月初人会非常非常多，排队可能很长</li>
+                        <li data-zh="<strong><a href='https://www.google.com/maps/place/Splash+Planet' target='_blank' class='location-link' data-tooltip='Hastings的大型水上主题乐园，有各种水滑梯和泳池，夏季高峰期人很多' data-image='https://images.unsplash.com/photo-1561207406-2aa22cc05a26?w=800&q=80'>Splash Planet<span class='icon'>📍</span></a> (Hastings)</strong>" data-en="<strong><a href='https://www.google.com/maps/place/Splash+Planet' target='_blank' class='location-link' data-tooltip='Hastings\' large water theme park with various water slides and pools, very crowded in summer peak' data-image='https://images.unsplash.com/photo-1561207406-2aa22cc05a26?w=800&q=80'>Splash Planet<span class='icon'>📍</span></a> (Hastings)</strong>"><strong><a href="https://www.google.com/maps/place/Splash+Planet" target="_blank" class="location-link" data-tooltip="Hastings的大型水上主题乐园，有各种水滑梯和泳池，夏季高峰期人很多" data-image="https://images.unsplash.com/photo-1561207406-2aa22cc05a26?w=800&q=80">Splash Planet<span class="icon">📍</span></a> (Hastings)</strong></li>
+                        <li data-zh="如果你儿子喜欢玩水，这里有新西兰最好的水上滑梯" data-en="If your son enjoys water fun, this has New Zealand's best water slides">如果你儿子喜欢玩水，这里有新西兰最好的水上滑梯</li>
+                        <li data-zh="注意：1月初人会非常非常多，排队可能很长" data-en="Note: Early January will be extremely crowded, expect long queues">注意：1月初人会非常非常多，排队可能很长</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="sunset">🌅 傍晚 (必去)</h4>
                     <ul>
-                        <li>开车上 <strong><a href="https://www.google.com/maps/place/Te+Mata+Peak" target="_blank" class="location-link" data-tooltip="399米高的山峰，可开车直达山顶，360度全景视野俯瞰霍克湾，日落绝美" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Te Mata Peak<span class="icon">📍</span></a> (Havelock North)</strong> 看日落</li>
-                        <li>这是北岛最壮观的景色之一，无需爬山，车直达顶峰</li>
+                        <li data-zh="开车上 <strong><a href='https://www.google.com/maps/place/Te+Mata+Peak' target='_blank' class='location-link' data-tooltip='399米高的山峰，可开车直达山顶，360度全景视野俯瞰霍克湾，日落绝美' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Te Mata Peak<span class='icon'>📍</span></a> (Havelock North)</strong> 看日落" data-en="Drive up <strong><a href='https://www.google.com/maps/place/Te+Mata+Peak' target='_blank' class='location-link' data-tooltip='399m peak, drive to summit, 360-degree panoramic views of Hawke\'s Bay, stunning sunsets' data-image='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'>Te Mata Peak<span class='icon'>📍</span></a> (Havelock North)</strong> for sunset">开车上 <strong><a href="https://www.google.com/maps/place/Te+Mata+Peak" target="_blank" class="location-link" data-tooltip="399米高的山峰，可开车直达山顶，360度全景视野俯瞰霍克湾，日落绝美" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80">Te Mata Peak<span class="icon">📍</span></a> (Havelock North)</strong> 看日落</li>
+                        <li data-zh="这是北岛最壮观的景色之一，无需爬山，车直达顶峰" data-en="One of North Island's most spectacular views, no hiking needed, drive straight to summit">这是北岛最壮观的景色之一，无需爬山，车直达顶峰</li>
                     </ul>
                 </div>
             </div>
@@ -778,22 +795,22 @@
                 <div class="activity">
                     <h4 data-trans-key="return">🚗 行程</h4>
                     <ul>
-                        <li>沿 SH5 返回</li>
+                        <li data-zh="沿 SH5 返回" data-en="Return via SH5">沿 SH5 返回</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="lunchStop">🍽️ 午餐</h4>
                     <ul>
-                        <li>在 <span class="highlight"><a href="https://www.google.com/maps/place/Tirau,+New+Zealand" target="_blank" class="location-link" data-tooltip="奥克兰和陶波之间的创意小镇，以波纹铁皮动物建筑闻名，非常适合拍照打卡" data-image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80">Tirau<span class="icon">📍</span></a></span> (波纹铁皮小镇) 停留</li>
-                        <li>打卡那些可爱的铁皮狗、铁皮羊建筑</li>
+                        <li data-zh="在 <span class='highlight'><a href='https://www.google.com/maps/place/Tirau,+New+Zealand' target='_blank' class='location-link' data-tooltip='奥克兰和陶波之间的创意小镇，以波纹铁皮动物建筑闻名，非常适合拍照打卡' data-image='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'>Tirau<span class='icon'>📍</span></a></span> (波纹铁皮小镇) 停留" data-en="Stop at <span class='highlight'><a href='https://www.google.com/maps/place/Tirau,+New+Zealand' target='_blank' class='location-link' data-tooltip='Creative town between Auckland and Taupo, famous for corrugated iron animal buildings, great for photos' data-image='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'>Tirau<span class='icon'>📍</span></a></span> (corrugated iron town)">在 <span class="highlight"><a href="https://www.google.com/maps/place/Tirau,+New+Zealand" target="_blank" class="location-link" data-tooltip="奥克兰和陶波之间的创意小镇，以波纹铁皮动物建筑闻名，非常适合拍照打卡" data-image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80">Tirau<span class="icon">📍</span></a></span> (波纹铁皮小镇) 停留</li>
+                        <li data-zh="打卡那些可爱的铁皮狗、铁皮羊建筑" data-en="Check out the cute corrugated iron dog and sheep buildings">打卡那些可爱的铁皮狗、铁皮羊建筑</li>
                     </ul>
                 </div>
 
                 <div class="activity">
                     <h4 data-trans-key="returnHome">🏠 下午</h4>
                     <ul>
-                        <li>回到奥克兰，结束完美假期！</li>
+                        <li data-zh="回到奥克兰，结束完美假期！" data-en="Return to Auckland, perfect holiday complete!">回到奥克兰，结束完美假期！</li>
                     </ul>
                 </div>
             </div>
@@ -805,26 +822,26 @@
 
             <div class="todo-list">
                 <div class="todo-item">
-                    <h3>🏨 1. 住宿 (紧急)</h3>
+                    <h3 data-zh="🏨 1. 住宿 (紧急)" data-en="🏨 1. Accommodation (Urgent)">🏨 1. 住宿 (紧急)</h3>
                     <ul>
-                        <li><strong>Napier/Hastings (12.31-1.4)：</strong>这是跨年旺季，现在就去 Booking/Airbnb 锁房。搜不到 Napier 就搜 Hastings，反而更安静方便。</li>
-                        <li><strong>Whangārei (12.26-12.28)：</strong>相对好订，找 Town Basin 附近的。</li>
+                        <li data-zh="<strong>Napier/Hastings (12.31-1.4)：</strong>这是跨年旺季，现在就去 Booking/Airbnb 锁房。搜不到 Napier 就搜 Hastings，反而更安静方便。" data-en="<strong>Napier/Hastings (12.31-1.4):</strong> This is peak New Year season, book now on Booking/Airbnb. If Napier is full, try Hastings - actually quieter and more convenient."><strong>Napier/Hastings (12.31-1.4)：</strong>这是跨年旺季，现在就去 Booking/Airbnb 锁房。搜不到 Napier 就搜 Hastings，反而更安静方便。</li>
+                        <li data-zh="<strong>Whangārei (12.26-12.28)：</strong>相对好订，找 Town Basin 附近的。" data-en="<strong>Whangārei (12.26-12.28):</strong> Relatively easier to book, find accommodation near Town Basin."><strong>Whangārei (12.26-12.28)：</strong>相对好订，找 Town Basin 附近的。</li>
                     </ul>
                 </div>
 
                 <div class="todo-item">
-                    <h3>🎫 2. 活动预订</h3>
+                    <h3 data-zh="🎫 2. 活动预订" data-en="🎫 2. Activity Bookings">🎫 2. 活动预订</h3>
                     <ul>
-                        <li><strong>Hokianga Express (Opononi)：</strong>必须提前订，圣诞期间滑沙的人很多。</li>
-                        <li><strong>Gannet Beach Adventures (拖拉机)：</strong>如果选这个，也要看潮汐时间表并预订。</li>
+                        <li data-zh="<strong>Hokianga Express (Opononi)：</strong>必须提前订，圣诞期间滑沙的人很多。" data-en="<strong>Hokianga Express (Opononi):</strong> Must book in advance, sandboarding is very popular during Christmas period."><strong>Hokianga Express (Opononi)：</strong>必须提前订，圣诞期间滑沙的人很多。</li>
+                        <li data-zh="<strong>Gannet Beach Adventures (拖拉机)：</strong>如果选这个，也要看潮汐时间表并预订。" data-en="<strong>Gannet Beach Adventures (Tractor):</strong> If choosing this, check tide timetable and book in advance."><strong>Gannet Beach Adventures (拖拉机)：</strong>如果选这个，也要看潮汐时间表并预订。</li>
                     </ul>
                 </div>
 
                 <div class="todo-item">
-                    <h3>🚗 3. 车辆检查</h3>
+                    <h3 data-zh="🚗 3. 车辆检查" data-en="🚗 3. Vehicle Check">🚗 3. 车辆检查</h3>
                     <ul>
-                        <li>出发前检查轮胎和机油</li>
-                        <li>SH5 (Napier-Taupo 公路) 弯道多，路况复杂，确保车况良好。</li>
+                        <li data-zh="出发前检查轮胎和机油" data-en="Check tires and oil before departure">出发前检查轮胎和机油</li>
+                        <li data-zh="SH5 (Napier-Taupo 公路) 弯道多，路况复杂，确保车况良好。" data-en="SH5 (Napier-Taupo Highway) has many curves and complex conditions, ensure vehicle is in good condition.">SH5 (Napier-Taupo 公路) 弯道多，路况复杂，确保车况良好。</li>
                     </ul>
                 </div>
             </div>
@@ -1041,8 +1058,15 @@
             langText.textContent = currentLang === 'zh' ? 'English' : '中文';
 
             // Update all elements with data-zh and data-en attributes
+            // Use innerHTML for elements that contain HTML tags
             document.querySelectorAll('[data-zh][data-en]').forEach(element => {
-                element.textContent = element.getAttribute('data-' + currentLang);
+                const content = element.getAttribute('data-' + currentLang);
+                // Check if content contains HTML tags
+                if (content && (content.includes('<') || element.tagName === 'LI' || element.tagName === 'P')) {
+                    element.innerHTML = content;
+                } else {
+                    element.textContent = content;
+                }
             });
 
             // Update all elements with data-trans-key attributes
